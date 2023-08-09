@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# korir codes
-
 
 def print_last_digit(number):
     

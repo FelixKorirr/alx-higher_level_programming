@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-#korir codes
-
 
 def islower(c):
     if ord(c) >= 97 and ord(c) <= 122:
