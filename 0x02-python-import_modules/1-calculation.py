@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def main():
+if __name__ == "__main__":
  
   a = 10
   b = 5
@@ -10,6 +10,3 @@ def main():
   print(f"{'10 - 5 = '} {total.sub(a,b)}")
   print(f"{'10 * 5 = '} {total.mul(a,b)}")
   print(f"{'10 / 5 = '} {total.div(a,b)}")
-
-if __name__ == "__main__":
- main()
