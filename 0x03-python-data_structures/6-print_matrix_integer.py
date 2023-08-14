@@ -1,4 +1,6 @@
-def matrix_int(matrix=[[]]):
+#!/usr/bin/python3
+
+def print_matrix_integer(matrix=[[]]):
 
     for items in matrix:
         for value in items:
