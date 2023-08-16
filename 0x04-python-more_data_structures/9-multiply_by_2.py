@@ -8,4 +8,4 @@ def multiply_by_2(a_dictionary):
     for x in key_val:
         new[x] *= 2
 
-    return (new)
+    return new
