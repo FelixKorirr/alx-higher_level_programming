@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 
 def search_replace(my_list, search, replace):
-    search = 1
-    replace = 89
 
-new = []
+    new = []
 
-for i in my_list:
+    for i in my_list:
 
-    if i == search:
-        new.append(replace)
-    else:
-        new.append(i)
-print(new)
+        if i == search:
+            new.append(replace)
+        else:
+            new.append(i)
+    return new
