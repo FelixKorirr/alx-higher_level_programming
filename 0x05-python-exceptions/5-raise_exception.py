@@ -1,2 +1,4 @@
+#!usr/bin/python3
 def raise_exception():
-    raise TypeError
+    x = 5
+    result = x + 'a'
