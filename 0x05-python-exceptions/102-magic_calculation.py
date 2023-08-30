@@ -10,8 +10,7 @@ def magic_calculation(a, b):
                 raise Exception('Too far')
             else:
                 total += a ** b / x
-                
-        except:
+        except ZeroDivisionError:
             total = b + a
             break
 
