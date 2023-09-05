@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+def type_func(a):
+    result = type(a)
+    print(result)
