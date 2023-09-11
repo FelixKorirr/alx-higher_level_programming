@@ -1,12 +1,12 @@
-#1-my_list.txt
+1-my_list.txt
 ------------------------------------------
 
-import
+case 0:import
 >>> MyList = __import__('1-my_list').MyList
 >>>
 ------------------------------------------
 
-object not defined
+case 1:object not defined
 
 >>> MyList = __import__('1-my_list').MyList
 >>> my_lists.print_sorted()
@@ -15,7 +15,7 @@ NameError: name 'my_lists' is not defined
 >>>
 -----------------------------------------
 
-list passed test
+case 2:list passed test
 
 >>> x = [3, 7, 5]
 >>> my_list = MyList(x)
@@ -24,7 +24,7 @@ list passed test
 >>>
 -----------------------------------------
 
-an empty list
+case 3:an empty list
 
 >>> x = []
 >>> my_list = MyList(x)
@@ -32,7 +32,7 @@ an empty list
 []
 >>>
 ----------------------------------------
-unique numbers
+case 4:unique numbers
 
 >>> my_list = MyList()
 >>> my_list.append(1)
@@ -43,7 +43,7 @@ unique numbers
 >>>
 -----------------------------------------
 
-same number
+case 5:same number
 
 >>> my_list3 = MyList()
 >>> my_list3.append(2)
@@ -54,7 +54,7 @@ same number
 [2, 2, 2, 2]
 >>>
 -----------------------------------------
-parent object
+case 6:parent object
 
 >>> my_list = [1, 2, 3]
 >>> my_list.print_sorted()
@@ -63,7 +63,7 @@ AttributeError: 'list' object has no attribute 'print_sorted'
 >>>
 -----------------------------------------
 
-negative numbers
+case 7:negative numbers
 -----------------------------------------
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
