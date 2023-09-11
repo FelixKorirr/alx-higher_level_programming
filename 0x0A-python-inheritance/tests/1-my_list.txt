@@ -1,0 +1,23 @@
+#1-my_list.txt
+
+#Sorts a list
+
+
+#This module defines sort function ```print_sorted(self)```.
+
+
+#How to use
+
+
+#Import MyList class
+from app import MyList
+
+#Create an instance of MyList
+custom_list = MyList([3, 1, 5, 2, 4])
+
+
+#Test the print_sorted method
+
+print(custom_list)
+
+print(custom_list.print_sorted())
