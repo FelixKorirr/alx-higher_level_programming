@@ -8,14 +8,7 @@ def read_file(filename=""):
         filename: file to read content from
     Returns: content of the file
     """
-    try:
-        with open(filename, 'r', encoding='utf-8') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
 
-            content = file.read()
-        print(content)
-
-    except FileNotFoundError:
-        print(f"File {filename} does not exist")
-
-    except Exception as e:
-        print(f"An error occurred!, {e}")
+        content = file.read()
+    print(content)
