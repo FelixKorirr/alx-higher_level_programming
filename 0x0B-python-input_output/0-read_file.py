@@ -1,15 +1,19 @@
 #!/usr/bin/python3
-"""Define read_file function"""
+"""Define append_write function"""
 
-
-def read_file(filename=""):
-    """Reads content of a file
+def append_write(filename="", text=""):
+    """Appends string of the end of a file
     Args:
         filename: file to read content from
-    Returns: content
-        """
-    with open(filename, 'r', encoding='utf-8') as file:
+        text: string to append to file
+    Returns: number of characters added
+    """
+    try:
+        with open(filename, 'a',encoding='utf-8') as file:
 
-        content = file.read()
-
-    print(content)
+            file.write(text)
+    except FileNotFoundError:
+        print("File {filename} does not exist!")
+        
+    except Exception as exp:
+        print(f"Error occurred on {str(exp)}")
