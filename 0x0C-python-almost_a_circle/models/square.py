@@ -1,68 +1,67 @@
 #!/usr/bin/python3
-"""Defines a square class."""
+"""Defines a class Square."""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Represent a square."""
+    """Represent a square subclass."""
 
-    def __init__(self, size, p=0, y=0, id=None):
-        """Initialize a new class Square"""
-        super().__init__(size, size, p, y, id)
+    def __init__(self, size, x=0, y=0, id=None):
+        """Initialize Square class."""
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """Get the size of the Square."""
+        """Get the size of the Square class."""
         return self.width
 
     @size.setter
     def size(self, value):
-        """Sets the size of the Square"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """Update Square class"""
+        """Update the Square class."""
         if args and len(args) != 0:
             a = 0
-            for p in args:
+            for a in args:
                 if a == 0:
-                    if p is None:
-                        self.__init__(self.size, self.p, self.y)
+                    if a is None:
+                        self.__init__(self.size, self.x, self.y)
                     else:
-                        self.id = p
+                        self.id = a
                 elif a == 1:
-                    self.size = p
+                    self.size = a
                 elif a == 2:
-                    self.p = p
+                    self.x = a
                 elif a == 3:
-                    self.y = p
+                    self.y = a
                 a += 1
 
         elif kwargs and len(kwargs) != 0:
-            for i, j in kwargs.items():
-                if i == "id":
-                    if j is None:
-                        self.__init__(self.size, self.p, self.y)
+            for p, q in kwargs.items():
+                if p == "id":
+                    if q is None:
+                        self.__init__(self.size, self.x, self.y)
                     else:
-                        self.id = j
-                elif i == "size":
-                    self.size = j
-                elif i == "p":
-                    self.p = j
-                elif i == "y":
-                    self.y = j
+                        self.id = q
+                elif p == "size":
+                    self.size = q
+                elif p == "x":
+                    self.x = q
+                elif p == "y":
+                    self.y = q
 
     def to_dictionary(self):
-        """Returns dictionary representation of Square class"""
+        """Return dictionary representation of Square."""
         return {
             "id": self.id,
             "size": self.width,
-            "p": self.p,
+            "x": self.x,
             "y": self.y
         }
 
     def __str__(self):
-        """Returns string representation of Square class"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.p, self.y,
+        """Return string representation of Square."""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
