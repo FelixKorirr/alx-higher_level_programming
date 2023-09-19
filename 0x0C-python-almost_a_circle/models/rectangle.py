@@ -9,16 +9,16 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize subclass Rectangle"""
-        if not isinstance(width, int):
+        if type(width) != int:
             raise TypeError("width must be an integer")
 
-        if not isinstance(height, int):
+        if type(height) != int:
             raise TypeError("height must be an integer")
 
-        if not isinstance(x, int):
+        if type(x) != int:
             raise TypeError("x must be an integer")
 
-        if not isinstance(y, int):
+        if type(y) != int:
             raise TypeError("y must be an integer")
 
         if (width < 0):
@@ -62,7 +62,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Set width of rectangle"""
-        if not type(value) != int:
+        if type(value) != int:
             raise TypeError("width must be an integer")
 
         if (value < 0):
