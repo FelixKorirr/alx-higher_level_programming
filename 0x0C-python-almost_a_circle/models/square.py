@@ -23,20 +23,20 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Update the Square class."""
         if args and len(args) != 0:
-            a = 0
+            m = 0
             for a in args:
-                if a == 0:
+                if m == 0:
                     if a is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = a
-                elif a == 1:
+                elif m == 1:
                     self.size = a
-                elif a == 2:
+                elif m == 2:
                     self.x = a
-                elif a == 3:
+                elif m == 3:
                     self.y = a
-                a += 1
+                m += 1
 
         elif kwargs and len(kwargs) != 0:
             for p, q in kwargs.items():
