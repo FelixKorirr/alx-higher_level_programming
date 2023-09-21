@@ -2,6 +2,7 @@
 """Define base superclass"""
 
 import json
+import turtle
 import csv
 
 
@@ -98,3 +99,36 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draw Rectangles and Squares using the turtle module."""
+        m = turtle.Turtle()
+        m.screen.bgcolor("#b7312c")
+        m.pensize(3)
+        m.shape("turtle")
+        m.color("#ffffff")
+        for r in list_rectangles:
+            m.showturtle()
+            m.up()
+            m.goto(r.x, r.y)
+            m.down()
+            for i in range(2):
+                m.forward(r.width)
+                m.left(90)
+                m.forward(r.height)
+                m.left(90)
+            m.hideturtle()
+        m.color("#b5e3d8")
+        for s in list_squares:
+            m.showturtle()
+            m.up()
+            m.goto(s.x, s.y)
+            m.down()
+            for i in range(2):
+                m.forward(s.width)
+                m.left(90)
+                m.forward(s.height)
+                m.left(90)
+            m.hideturtle()
+        turtle.exitonclick()
