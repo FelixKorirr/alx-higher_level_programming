@@ -1,12 +1,8 @@
 #!/usr/bin/node
 
-const Square101 = require("./5-square");
+const Square101 = require('./5-square');
 
 class Square extends Square101 {
-  constructor (size) {
-    super(size);
-  }
-
   charPrint (c) {
     for (let i = 0; i < this.size; i++) {
       let row = '';
