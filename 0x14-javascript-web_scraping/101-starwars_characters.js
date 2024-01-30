@@ -9,9 +9,9 @@ request.get(url, (error, response, body) => {
     console.log(error);
   } else {
     const content = JSON.parse(body);
-    const characters = content.characters;
-    for (const character of characters) {
-      request.get(character, (error, response, body) => {
+    const chars = content.characters;
+    for (const char of chars) {
+      request.get(char, (error, response, body) => {
         if (error) {
           console.log(error);
         } else {
