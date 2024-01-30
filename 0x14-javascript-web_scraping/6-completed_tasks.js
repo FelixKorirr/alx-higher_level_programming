@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // Computes number of tasks completed
 
-const request = require("request");
+const request = require('request');
 
 request.get(process.argv[2], { json: true }, (error, response, body) => {
   if (error) {
